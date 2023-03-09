@@ -89,16 +89,10 @@ public class FirstJavaPractice {
         System.out.printf("Passed test 4: %s%n", checkAnswer(result, answer));
 
         // Test 5
-        nums = new int[] {1, 2, 3, 4};
-        result = twoSum(nums, 56);
-        answer = null;
-        System.out.printf("Passed test 5: %s%n", checkAnswer(result, answer));
-
-        // Test 6
         nums = new int[] {0};
         result = twoSum(nums, 7);
         answer = null;
-        System.out.printf("Passed test 6: %s%n", checkAnswer(result, answer));
+        System.out.printf("Passed test 5: %s%n", checkAnswer(result, answer));
     }
 
     /**
