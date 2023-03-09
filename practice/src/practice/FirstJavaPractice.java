@@ -1,14 +1,12 @@
 /**
- * Name:
- * BU Email:
+ * Name: Alessandro Allegranzi
+ * BU Email: aallegra@bu.edu
  */
 package practice;
 
-import java.util.Arrays;
+import java.util.*;
 
 /**
- * Name: Alessandro Allegranzi
- * Email: aallegra@bu.edu
  * ---------------------------------------------------------
  *                          INSTRUCTIONS
  * ---------------------------------------------------------
@@ -38,7 +36,23 @@ public class FirstJavaPractice {
     public static int[] twoSum(int[] nums, int target) {
         // YOUR CODE HERE
         // HINT: One possible solution is to try looking at every pair of numbers using a double for loop
-        return null;
+        int[] solution = new int[0];
+
+        for (int i = 0; i < nums.length; i++ ) {
+            for (int j = 0; j < nums.length; j++) {
+                if (i ==j) {
+                    continue;
+                }
+                if (nums[i] + nums[j] == target) {
+                    solution = new int[] {i, j};
+                }
+            }
+        }
+
+        if (solution.length == 0) {
+            return null;
+        }
+        return solution;
     }
 
     // The main method in Java is run when the file is run, so it is a great place to put testing code
@@ -68,6 +82,23 @@ public class FirstJavaPractice {
         System.out.printf("Passed test 3: %s%n", checkAnswer(result, answer));
 
         // YOUR CODE HERE
+        // Test 4
+        nums = new int[] {1, -2, 3, 4};
+        result = twoSum(nums, 2);
+        answer = new int[] {1, 3};
+        System.out.printf("Passed test 4: %s%n", checkAnswer(result, answer));
+
+        // Test 5
+        nums = new int[] {1, 2, 3, 4};
+        result = twoSum(nums, 56);
+        answer = null;
+        System.out.printf("Passed test 5: %s%n", checkAnswer(result, answer));
+
+        // Test 6
+        nums = new int[] {0};
+        result = twoSum(nums, 7);
+        answer = null;
+        System.out.printf("Passed test 6: %s%n", checkAnswer(result, answer));
     }
 
     /**
