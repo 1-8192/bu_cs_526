@@ -7,6 +7,6 @@
 /dataSources/
 /dataSources.local.xml
 /out/
-.DS_Store
+/.DS_Store
 /bu_cs_526.iml
-.idea/
+/.idea/
